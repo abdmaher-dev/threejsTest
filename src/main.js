@@ -1,6 +1,7 @@
+import './style.css'
 import { getMenu, submitOrder } from "./api.js";
 import { createCoffeeScene } from "./scene.js";
-import './style.css'
+
 
 const $ = (id) => document.getElementById(id);
 
