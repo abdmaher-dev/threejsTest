@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d0907" />
+    <title>Dark Coffee · Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <section class="stage" aria-label="3D preview of the selected drink">
+        <div id="canvas-host" class="canvas-host"></div>
+
+        <header class="brand">
+          <span class="brand-mark" aria-hidden="true">●</span>
+          <div>
+            <h1>Dark Coffee</h1>
+            <p>Roasted dark. Served slow.</p>
+          </div>
+        </header>
+
+        <article class="feature" id="feature" aria-live="polite">
+          <p class="feature-category" id="feature-category"></p>
+          <h2 id="feature-name">&nbsp;</h2>
+          <p class="feature-desc" id="feature-desc"></p>
+          <div class="feature-row">
+            <span class="feature-price" id="feature-price"></span>
+            <button class="btn btn-primary" id="feature-add" type="button" disabled>Add to order</button>
+          </div>
+        </article>
+
+        <p class="hint">Drag to look around · click the cup</p>
+      </section>
+
+      <aside class="menu" aria-label="Menu">
+        <nav class="tabs" id="tabs" aria-label="Menu categories"></nav>
+        <div class="menu-list" id="menu-list">
+          <p class="status">Loading menu…</p>
+        </div>
+
+        <section class="order" id="order" aria-label="Your order">
+          <div class="order-lines" id="order-lines"></div>
+          <div class="order-bar">
+            <div>
+              <p class="order-count" id="order-count">Your order is empty</p>
+              <p class="order-total" id="order-total"></p>
+            </div>
+            <div class="order-actions">
+              <button class="btn btn-ghost" id="order-clear" type="button" hidden>Clear</button>
+              <button class="btn btn-primary" id="order-submit" type="button" disabled>Place order</button>
+            </div>
+          </div>
+        </section>
+      </aside>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
